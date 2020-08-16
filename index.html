@@ -48,7 +48,7 @@
 	</script>
     
 	<h2>CheckBox Selection on DataGrid</h2>
-	<p>Click the checkbox on header to select or unselect all selections.</p>
+	<p id="title">Click the checkbox on header to select or unselect all selections.</p>
 	<div style="margin:20px 0;"></div>
 	
 	<table id="dg" class="easyui-datagrid" title="CheckBox Selection on DataGrid" style="width:700px;height:250px"
@@ -69,6 +69,13 @@
 			</tr>
 		</thead>
 	</table> 
-	  
+	<script type="text/javascript">
+		$(function(){
+			$('#dg th').click(function(){
+				var v = $(this).val();
+				$('#title').text("Hello " + v);
+			});
+		});
+	</script>	  
   </body>
 </html>
