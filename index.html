@@ -9,46 +9,11 @@
     <script type="text/javascript" src="jquery.easyui.min.js"></script>
     
   </head>
-  <body>
-/**	  
-    <h1>覺得厲害</h1>
-	  
-	<h2>Basic ComboGrid</h2>
-	<p>Click the right arrow button to show the DataGrid.</p>
-	<div style="margin:20px 0"></div>
-	<div class="easyui-panel" style="width:100%;max-width:400px;padding:30px 60px;">
-		<div style="margin-bottom:20px">
-			<select class="easyui-combogrid" style="width:100%" data-options="
-					panelWidth: 700,
-					idField: 'name',
-					textField: 'name',
-					url: 'card_data.json',
-					method: 'get',
-					columns: [[
-						{field:'name',title:'名稱',width:80},
-						{field:'score',title:'分數',width:40,align:'right'},
-						{field:'name1',title:'對應',width:80},
-						{field:'score1',title:'分數',width:40,align:'right'},
-						{field:'name2',title:'對應',width:80},
-						{field:'score2',title:'分數',width:40,align:'right'},
-						{field:'name3',title:'對應',width:80},
-						{field:'score3',title:'分數',width:40,align:'right'},
-						{field:'name4',title:'對應',width:80},
-						{field:'score4',title:'分數',width:40,align:'right'}											  
-					]],
-					fitColumns: true,
-					label: 'Select Item:',
-					labelPosition: 'top'
-				">
-			</select>
-		</div>
-	</div>	  
-*/	  
-	  
+  <body>  
 	<p id="title">已選擇卡牌: </p>
 	<div style="margin:20px 0;"></div>
 	
-	<table id="dg" class="easyui-datagrid" title="總分: " style="width:700px;height:1600px"
+	<table id="dg" class="easyui-datagrid" title="總分: " style="width:700px;height:1200px"
 			data-options="rownumbers:true,singleSelect:false,url:'card_data.json',method:'get'">
 		<thead>
 			<tr>
