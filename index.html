@@ -71,11 +71,13 @@
 	</table> 
 	<script type="text/javascript">
 		$(function(){
-			$('#dg th').click(function(){
-				var v = $(this).val();
-				$('#title').text("Hello " + v);
-			});
-		});
+			$('#dg').datagrid({
+				onSelect: function(index,row){
+					var ed = row.name;
+					$(#title).text(ed);
+				}
+			});	
+		});		
 	</script>	  
   </body>
 </html>
