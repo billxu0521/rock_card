@@ -70,20 +70,19 @@
 		</thead>
 	</table> 
 	<script type="text/javascript">
-		var selected_row = [];
-		
 		$(function(){
 			$('#dg').datagrid({
 				onSelect: function(index,row){
-					selected_row.push(row)
+					var checkedItems = $('#dg').datagrid('getChecked');
 					var ed = '已選擇卡牌: ';
-					for (i = 0 ; i < selected_row.length ; ++i) {
-						if(i === selected_row.length-1) {
-							ed += this.selected_row[i].name;
+					$.each(checkedItems, function(index, item){
+						if(index === checkedItems.length-1) {
+							ed += item.name;
 						} else {
-							ed += this.selected_row[i].name + ", ";
-						}
-					}
+							ed += item.name + ", ";
+						}						
+					});    					
+					
 					$('#title').text(ed);
 				}
 			});	
