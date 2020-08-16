@@ -83,7 +83,7 @@
 				var checkedItems = $('#dg').datagrid('getChecked');
 				var ed = '已選擇卡牌: ';
 				$.each(checkedItems, function(index, item){
-					if(index === checkedItems.length) {
+					if(index === checkedItems.length-1) {
 						ed += item.name;	
 					} else {
 						ed += item.name + ", ";	
@@ -91,20 +91,7 @@
 				});    					
 				$('#title').text(ed);
 			}				
-		});	
-		function setSelectedTitle (index,row) {
-			var checkedItems = $('#dg').datagrid('getChecked');
-			var ed = '已選擇卡牌: ';
-			$.each(checkedItems, function(index, item){
-				if(index === checkedItems.length) {
-					ed += item.name;	
-				} else {
-					ed += item.name + ", ";	
-				}				
-			});    					
-			$('#title').text(ed);
-		}		
-
+		});
 	</script>	  
   </body>
 </html>
