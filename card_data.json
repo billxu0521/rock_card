@@ -18,8 +18,8 @@
 	{"name":"白玉斷脈膏","score":"10","name1":"","score1":"","name2":"","score2":"","name3":"","score3":"","name4":"","score4":""},
 	{"name":"吸功大法","score":"30","name1":"北極神功","score1":"30","name2":"","score2":"","name3":"","score3":"","name4":"","score4":""},
 	{"name":"北極神功","score":"60","name1":"奇毒","score1":"-60","name2":"封脈","score2":"-30","name3":"換脈經","score3":"-60","name4":"","score4":""},
-	{"name":"換脈經","score":"60","name1":"封脈","score1":"-60","name2":"奇毒","score2":"-30","name3":"北極神功","score3":"-60","name4":"","score4":""},	
-	{"name":"太陽神功","score":"60","name1":"內傷","score1":"-60","name2":"去勢","score2":"-30","name3":"太陰神功","score3":"-60","name4":"","score4":""},	
-	{"name":"太陰神功","score":"60","name1":"封脈","score1":"-60","name2":"內傷","score2":"-30","name3":"太陽神功","score3":"-60","name4":"","score4":""},	
+	{"name":"換脈經","score":"60","name1":"封脈","score1":"-60","name2":"奇毒","score2":"-30","name3":"北極神功","score3":"-60","name4":"","score4":""},
+	{"name":"太陽神功","score":"60","name1":"內傷","score1":"-60","name2":"去勢","score2":"-30","name3":"太陰神功","score3":"-60","name4":"","score4":""},
+	{"name":"太陰神功","score":"60","name1":"封脈","score1":"-60","name2":"內傷","score2":"-30","name3":"太陽神功","score3":"-60","name4":"","score4":""},
 	{"name":"重劍口訣","score":"5","name1":"劍法","score1":"20","name2":"刀法","score2":"20","name3":"斷臂","score3":"40","name4":"","score4":""}
 ]}
