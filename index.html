@@ -48,7 +48,7 @@
 	</script>
     
 	<h2>CheckBox Selection on DataGrid</h2>
-	<p id="title">Click the checkbox on header to select or unselect all selections.</p>
+	<p id="title">已選擇卡牌: </p>
 	<div style="margin:20px 0;"></div>
 	
 	<table id="dg" class="easyui-datagrid" title="CheckBox Selection on DataGrid" style="width:700px;height:250px"
@@ -75,10 +75,14 @@
 		$(function(){
 			$('#dg').datagrid({
 				onSelect: function(index,row){
-					this.selected_row.push(row)
-					var ed;
-					for (i = 0 ; i < this.selected_row.length ; ++i) {
-						ed += this.selected_row[i].name + " ";
+					selected_row.push(row)
+					var ed = '已選擇卡牌: ';
+					for (i = 0 ; i < selected_row.length ; ++i) {
+						if(i === selected_row.length-1) {
+							ed += this.selected_row[i].name;
+						} else {
+							ed += this.selected_row[i].name + ", ";
+						}
 					}
 					$('#title').text(ed);
 				}
