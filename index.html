@@ -72,25 +72,28 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#dg').datagrid({
-				onCheck: function(index,row){
-					var checkedItems = $('#dg').datagrid('getChecked');
-					var ed = '已選擇卡牌: ';
-					$.each(checkedItems, function(index, item){
-						ed += item.name + ", ";					
-					});    					
-					//ed += row.name;
-					$('#title').text(ed);
+				onCheck : function(index,row) {
+					this.setSelectedTitle(index,row);
 				},
-				onUncheck: function(index,row){
+				onUncheck : function(index,row) {
+					this.setSelectedTitle(index,row);
+				},
+				setSelectedTitle : function(index,row) {
 					var checkedItems = $('#dg').datagrid('getChecked');
 					var ed = '已選擇卡牌: ';
 					$.each(checkedItems, function(index, item){
-						ed += item.name + ", ";					
+						if(index === checkedItems.length) {
+							ed += item.name;	
+						} else {
+							ed += item.name + ", ";	
+						}				
 					});    					
 					$('#title').text(ed);
 				}				
 			});	
-		});		
+		});	
+		
+
 	</script>	  
   </body>
 </html>
