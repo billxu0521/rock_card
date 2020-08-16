@@ -47,5 +47,28 @@
 		});
 	</script>
     
+	<h2>CheckBox Selection on DataGrid</h2>
+	<p>Click the checkbox on header to select or unselect all selections.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table id="dg" class="easyui-datagrid" title="CheckBox Selection on DataGrid" style="width:700px;height:250px"
+			data-options="rownumbers:true,singleSelect:false,url:'card_data.json',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'ck',checkbox:true"></th>
+				<th data-options="field:'name',width:80">名稱</th>
+				<th data-options="field:'score',width:100">分數</th>
+				<th data-options="field:'name1',width:80,align:'right'">對應1</th>
+				<th data-options="field:'score1',width:80,align:'right'">分數1</th>
+				<th data-options="field:'name2',width:80,align:'right'">對應2</th>
+				<th data-options="field:'score2',width:80,align:'right'">分數2</th>
+				<th data-options="field:'name3',width:80,align:'right'">對應3</th>
+				<th data-options="field:'score3',width:80,align:'right'">分數3</th>
+				<th data-options="field:'name4',width:80,align:'right'">對應4</th>
+				<th data-options="field:'score4',width:80,align:'right'">分數4</th>				
+			</tr>
+		</thead>
+	</table> 
+	  
   </body>
 </html>
