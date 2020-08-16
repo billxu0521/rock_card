@@ -72,16 +72,16 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#dg').datagrid({
-				onSelect: function(index,row){
+				onCheck: function(index,row){
 					var checkedItems = $('#dg').datagrid('getChecked');
 					var ed = '已選擇卡牌: ';
 					$.each(checkedItems, function(index, item){
 						ed += item.name + ", ";					
 					});    					
-					ed += row.name;
+					//ed += row.name;
 					$('#title').text(ed);
 				},
-				onUnselect: function(index,row){
+				onUncheck: function(index,row){
 					var checkedItems = $('#dg').datagrid('getChecked');
 					var ed = '已選擇卡牌: ';
 					$.each(checkedItems, function(index, item){
