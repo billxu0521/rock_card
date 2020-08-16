@@ -76,15 +76,19 @@
 					var checkedItems = $('#dg').datagrid('getChecked');
 					var ed = '已選擇卡牌: ';
 					$.each(checkedItems, function(index, item){
-						if(index === checkedItems.length-1) {
-							ed += item.name;
-						} else {
-							ed += item.name + ", ";
-						}						
+						ed += item.name + ", ";					
 					});    					
-					
+					ed += row.name;
 					$('#title').text(ed);
-				}
+				},
+				onUnselect: function(index,row){
+					var checkedItems = $('#dg').datagrid('getChecked');
+					var ed = '已選擇卡牌: ';
+					$.each(checkedItems, function(index, item){
+						ed += item.name + ", ";					
+					});    					
+					$('#title').text(ed);
+				}				
 			});	
 		});		
 	</script>	  
