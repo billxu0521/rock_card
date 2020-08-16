@@ -12,7 +12,8 @@
   <body>  
 	<p id="title">已選擇卡牌: </p>
 	<div style="margin:20px 0;"></div>
-	
+	  
+	<div style="margin:20px 0;">	
 	<table id="dg" class="easyui-datagrid" title="總分: " style="width:200px;height:1000px"
 			data-options="rownumbers:true,singleSelect:false,url:'card_data.json',method:'get'">
 		<thead>
@@ -20,14 +21,20 @@
 				<th data-options="field:'ck',checkbox:true"></th>
 				<th data-options="field:'name',width:80">名稱</th>
 				<th data-options="field:'score',width:40,align:'right'">分數</th>				
-			</tr>
+			</tr>		
+		</thead>
+	</table> 
+	<table id="dg2" class="easyui-datagrid" title="總分: " style="width:200px;height:1000px"
+			data-options="rownumbers:true,singleSelect:false,url:'card_data.json',method:'get'">
+		<thead>
 			<tr>
 				<th data-options="field:'ck',checkbox:true"></th>
 				<th data-options="field:'name',width:80">名稱</th>
 				<th data-options="field:'score',width:40,align:'right'">分數</th>				
-			</tr>			
+			</tr>		
 		</thead>
-	</table> 
+	</table> 		
+	</div>
 	<script type="text/javascript">
 		$(function(){
 			$('#dg').datagrid({
