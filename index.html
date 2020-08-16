@@ -73,11 +73,9 @@
 		$(function(){
 			$('#dg').datagrid({
 				onCheck : function(index,row) {
-					this.setSelectedTitle(index,row);
 					setSelectedTitle(index,row);
 				},
 				onUncheck : function(index,row) {
-					this.setSelectedTitle(index,row);
 					setSelectedTitle(index,row);
 				}				
 			});	
