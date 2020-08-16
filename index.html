@@ -70,10 +70,16 @@
 		</thead>
 	</table> 
 	<script type="text/javascript">
+		var selected_row = [];
+		
 		$(function(){
 			$('#dg').datagrid({
 				onSelect: function(index,row){
-					var ed = row.name;
+					this.selected_row.push(row)
+					var ed;
+					for (i = 0 ; i < this.selected_row.length ; ++i) {
+						ed += this.selected_row[i].name + " ";
+					}
 					$('#title').text(ed);
 				}
 			});	
