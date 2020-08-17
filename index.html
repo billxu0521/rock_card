@@ -16,8 +16,10 @@
   <body>  
 	<p id="title">已選擇卡牌: </p>
 	<div style="margin:20px 0;"></div>
-	  
+	 
 	<div class="container" id="coverpage"> 
+	<el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
 	<div class="row">
 	<div style="float:left">
 	<table id="dg" class="easyui-datagrid" title="總分: " width="110" style="float:left"
