@@ -2,82 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>你好，GitHub</title>
-    <link rel="stylesheet" type="text/css" href="./themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="./themes/icon.css">
-    <!-- 引入样式 -->
-	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-	<!-- 引入组件库 -->
-	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.easyui.min.js"></script>
-    
+    <title>AnnotationReader</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,height=device-height"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
   </head>
-  <body>  
-	<p id="title">已選擇卡牌: </p>
-	<div style="margin:20px 0;"></div>
-	 
-	<div class="container" id="coverpage"> 
-	<el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-	<div class="row">
-	<div style="float:left">
-	<table id="dg" class="easyui-datagrid" title="總分: " width="110" style="float:left"
-			data-options="singleSelect:false,url:'card_data.json',method:'get'">
-		<thead>
-			<tr>
-				<th data-options="field:'ck',checkbox:true"><input type="button" type="button">Click Me!</input></th>
-				<th data-options="field:'name',width:80">名稱</th>
-			</tr>		
-		</thead>
-	</table> 
-	</div>
-	<div style="float:left;margin:10px 10px;"></div>
-
-	<div style="float:left">
-	<table id="dg2" class="easyui-datagrid" title="總分: " width="110" style="float:left"
-			data-options="singleSelect:false,url:'card_data.json',method:'get'">
-		<thead>
-			<tr>
-				<th data-options="field:'ck',checkbox:true"></th>
-				<th data-options="field:'name',width:80">名稱</th>			
-			</tr>		
-		</thead>
-	</table> 
-	</div>
-		
-	</div>
-	</div>
-		
-	<script type="text/javascript">
-		$(function(){
-			$('#dg').datagrid({
-				onCheck : function(index,row) {
-					setSelectedTitle(index,row);
-				},
-				onUncheck : function(index,row) {
-					setSelectedTitle(index,row);
-				},
-				onCheckAll : function(index,row) {
-					setSelectedTitle(index,row);
-				},
-				onUncheckAll : function(index,row) {
-					setSelectedTitle(index,row);
-				}				
-			});	
-			function setSelectedTitle (index,row) {
-				var checkedItems = $('#dg').datagrid('getChecked');
-				var ed = '已選擇卡牌: ';
-				$.each(checkedItems, function(index, item){
-					if(index === checkedItems.length-1) {
-						ed += item.name;	
-					} else {
-						ed += item.name + ", ";	
-					}				
-				});    					
-				$('#title').text(ed);
-			}				
-		});
-	</script>	  
+  <body>
+    <div id="app">
+    </div>
+    <!-- built files will be auto injected -->
   </body>
 </html>
