@@ -3,18 +3,19 @@
   <div id="app">
     <el-container>
       <el-main>
-      已持有手牌(點擊可以取消選擇)：<el-row  type="flex" justify="center" class="row-bg selectcardcontainer" :gutter="10">
-          <el-col  :span="2" v-for="(select_card,index) in select" :key="index"  class="selectcard">
-            <el-button type="button" @click="removeCard" :value="select_card" round> {{select_card}}</el-button>
+      已持有手牌(點擊可以取消選擇)：<el-row  type="flex" justify="center" class="row-bg selectcardcontainer" :gutter="6">
+          <el-col  :span="6" v-for="(select_card,index) in select" :key="index"  class="selectcard">
+            <el-button type="button" @click="removeCard(index)" :value="index" round> {{select_card}}</el-button>
         </el-col>
       </el-row>
-      
+      <div class="score">結果：{{score}}分</div>
+
       <br>
       手牌選擇區：
       <el-row>
-        <el-col :span="24">
+        <el-col :span="24" class="allcard">
           <div v-for="card in allCardData.rows" :key="card.name"  class="card">
-            <el-button type="button" @click="addCard" :value="card.name">{{card.name}}</el-button>
+            <el-button type="button" @click="addCard(card.name)" :value="card.name">{{card.name}}</el-button>
           </div>
         </el-col>
       </el-row>
@@ -34,7 +35,7 @@ export default {
       cardlist:[],
       select:[],
       card_combine:[],
-      score:0
+      score:999
     }
   },
   watch: {
@@ -71,15 +72,14 @@ export default {
     //console.log(this.cardlist)
   },
   methods: {
-    addCard(e){
-      console.log(e.target.innerText)
+    addCard(value){
       if(this.select.length < 7){
-        this.select.push(e.target.innerText)
+        this.select.push(value)
       }
     },
-    removeCard(){
+    removeCard(value){
       if(this.select !== null){
-        delete this.select.pop()
+        (this.select).splice(value, 1)
       }
     },
     checkCombine(){
@@ -136,6 +136,22 @@ export default {
     margin-bottom: 40px;
   }
   
+  .selectcardcontainer{
+    flex-wrap: wrap;    
+    max-width: 90vw;
+    height: 20vh;
+  }
+
+  .allcard{
+    max-height: 60vh;
+    overflow: auto;
+  }
+
+  .score{
+    font-size: 42px;
+    color: red;
+  }
+
   .el-container:nth-child(5) .el-aside,
   .el-container:nth-child(6) .el-aside {
     line-height: 260px;
