@@ -3,20 +3,19 @@
   <div id="app">
     <el-container>
       <el-main>
-      已持有手牌(點擊可以取消選擇)：<el-row  type="flex" justify="center" class="row-bg selectcardcontainer" :gutter="6">
+      已持有手牌(點擊可以取消選擇)：
+      <el-row  type="flex" justify="center" class="row-bg selectcardcontainer" :gutter="10">
           <el-col  :span="6" v-for="(select_card,index) in select" :key="index"  class="selectcard">
-            <el-button type="button" @click="removeCard(index)" :value="index" round> {{select_card}}</el-button>
+            <el-card @click.native="removeCard(index)" :value="index" shadow="always"> {{select_card}}</el-card>
         </el-col>
       </el-row>
-      <div class="score">結果：{{score}}分</div>
-
+        <transition name="score" ><p id="score" v-show="scoreshow">結果：{{score}}分</p></transition>
       <br>
       手牌選擇區：
-      <el-row>
-        <el-col :span="24" class="allcard">
-          <div v-for="card in allCardData.rows" :key="card.name"  class="card">
-            <el-button type="button" @click="addCard(card.name)" :value="card.name">{{card.name}}</el-button>
-          </div>
+      <el-row type="flex" class="row-bg cardcontainer" :gutter="1">
+        <el-col :span="12" class="allcard" v-for="card in allCardData.rows" :key="card.name"  >
+            <el-button  @click="addCard(card.name)" :value="card.name" round>{{card.name}}</el-button>
+          
         </el-col>
       </el-row>
     </el-main>
@@ -35,13 +34,27 @@ export default {
       cardlist:[],
       select:[],
       card_combine:[],
-      score:999
+      score:999,
+      scoreshow:false,
+      noscoreshow:true
     }
   },
   watch: {
     select(){
+      this.scoreshow = false
+      this.noscoreshow = false
       console.log('新增卡片')
       //this.checkCombine()
+      let checkscore = this.getRandom(0,10)
+      if(this.select.length > 1 && checkscore > 3){
+        this.score = this.getRandom(0,999)
+        this.scoreshow = true
+        this.noscoreshow = false
+      }else{
+        this.scoreshow = false
+        this.noscoreshow = true
+      }
+      
     }
    
   },
@@ -73,14 +86,19 @@ export default {
   },
   methods: {
     addCard(value){
+      
       if(this.select.length < 7){
         this.select.push(value)
       }
     },
     removeCard(value){
+      
       if(this.select !== null){
         (this.select).splice(value, 1)
       }
+    },
+    getRandom(min,max){
+      return Math.floor(Math.random()*(max-min+1))+min;
     },
     checkCombine(){
       if(this.select.length > 1){
@@ -139,17 +157,50 @@ export default {
   .selectcardcontainer{
     flex-wrap: wrap;    
     max-width: 90vw;
-    height: 20vh;
+    min-height: 10vh;
+    margin-bottom: 40px;
+  }
+
+  .selectcard{
+    margin-top: 10px;
+  }
+
+  .cardcontainer{
+    overflow: auto;
+    flex-wrap: wrap;    
+    max-height: 60vh;
   }
 
   .allcard{
-    max-height: 60vh;
-    overflow: auto;
+    margin-top:2%;
+    margin-bottom:2%;
   }
 
-  .score{
+  #score{
     font-size: 42px;
     color: red;
+  }
+
+  .allcard button{
+    font-size: 20px !important;
+  }
+  .allcard{
+    margin-bottom: 2%;
+  }
+
+  .selectcard button{
+    font-size: 28px !important; 
+  }
+
+  .score-enter-active  {
+    transition: opacity .5s;
+  }
+  .score-enter ,.score-leave-to/* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+  .score-enter-to ,.score-leave/* .fade-leave-active below version 2.1.8 */ {
+    opacity: 1;
   }
 
   .el-container:nth-child(5) .el-aside,
