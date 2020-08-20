@@ -1,0 +1,365 @@
+{
+  "total": 23,
+  "rows": [
+    {
+      "name": "內傷",
+      "score": "-30",
+      "color":"danger",
+      "ref": [
+        {
+          "name": "換脈經",
+          "score": "60"
+        },
+        {
+          "name": "吸功大法",
+          "score": "40"
+        },
+        {
+          "name": "北極神功",
+          "score": "60"
+        },
+        {
+          "name": "奇毒",
+          "score": "90"
+        }
+      ]
+    },
+    {
+      "name": "去勢",
+      "score": "-40",
+      "color":"danger",
+      "ref": [
+        {
+          "name": "劍法",
+          "score": "60"
+        },
+        {
+          "name": "菊花密典",
+          "score": "80"
+        },
+        {
+          "name": "內傷",
+          "score": "90"
+        }
+      ]
+    },
+    {
+      "name": "斷臂",
+      "score": "-60",
+      "color":"danger",
+      "ref": [
+        {
+          "name": "重劍口訣",
+          "score": "80"
+        },
+        {
+          "name": "去勢",
+          "score": "90"
+        }
+      ]
+    },
+    {
+      "name": "封脈",
+      "score": "-30",
+      "color":"danger",
+      "ref": [
+        {
+          "name": "白玉續脈膏",
+          "score": "80"
+        },
+        {
+          "name": "斷臂",
+          "score": "90"
+        }
+      ]
+    },
+    {
+      "name": "奇毒",
+      "score": "-60",
+      "color":"danger",
+      "ref": [
+        {
+          "name": "蛇膽",
+          "score": "80"
+        },
+        {
+          "name": "封脈",
+          "score": "90"
+        }
+      ]
+    },
+    {
+      "name": "劍法",
+      "score": "5",
+      "ref": [
+        {
+          "name": "劍法",
+          "score": "10"
+        },
+        {
+          "name": "劍法",
+          "score": "10"
+        },
+        {
+          "name": "雙劍",
+          "score": "10"
+        },
+        {
+          "name": "雙劍",
+          "score": "10"
+        }
+      ]
+    },
+    {
+      "name": "拳法",
+      "score": "5",
+      "ref": [
+        {
+          "name": "掌法",
+          "score": "15"
+        },
+        {
+          "name": "腿法",
+          "score": "15"
+        }
+      ]
+    },
+    {
+      "name": "掌法",
+      "score": "5",
+      "ref": [
+        {
+          "name": "拳法",
+          "score": "15"
+        },
+        {
+          "name": "腿法",
+          "score": "15"
+        }
+      ]
+    },
+    {
+      "name": "腿法",
+      "score": "5",
+      "ref": [
+        {
+          "name": "拳法",
+          "score": "15"
+        },
+        {
+          "name": "掌法",
+          "score": "15"
+        }
+      ]
+    },
+    {
+      "name": "輕功",
+      "score": "5",
+      "ref": [
+        {
+          "name": "劍法",
+          "score": "20"
+        },
+        {
+          "name": "雙劍",
+          "score": "15"
+        }
+      ]
+    },
+    {
+      "name": "暗器",
+      "score": "5",
+      "ref": [
+        {
+          "name": "暗器",
+          "score": "10"
+        },
+        {
+          "name": "暗器",
+          "score": "10"
+        },
+        {
+          "name": "暗器",
+          "score": "10"
+        },
+        {
+          "name": "暗器",
+          "score": "10"
+        }
+      ]
+    },
+    {
+      "name": "雙劍",
+      "score": "10",
+      "ref": [
+        {
+          "name": "劍法",
+          "score": "20"
+        },
+        {
+          "name": "輕功",
+          "score": "20"
+        }
+      ]
+    },
+    {
+      "name": "內功",
+      "score": "5",
+      "ref": [
+        {
+          "name": "刀法",
+          "score": "20"
+        },
+        {
+          "name": "拳法",
+          "score": "15"
+        },
+        {
+          "name": "掌法",
+          "score": "15"
+        },
+        {
+          "name": "腿法",
+          "score": "15"
+        }
+      ]
+    },
+    {
+      "name": "刀法",
+      "score": "5",
+      "ref": [
+        {
+          "name": "內功",
+          "score": "30"
+        }
+      ]
+    },
+    {
+      "name": "蛇膽",
+      "score": "10",
+      "ref": [
+        {
+          "name": "內功",
+          "score": "20"
+        }
+      ]
+    },
+    {
+      "name": "菊花密典",
+      "score": "0",
+      "color":"primary",
+      "ref": []
+    },
+    {
+      "name": "白玉續脈膏",
+      "score": "10",
+      "ref": []
+    },
+    {
+      "name": "吸功大法",
+      "score": "30",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "北極神功",
+          "score": "30"
+        }
+      ]
+    },
+    {
+      "name": "北極神功",
+      "score": "60",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "奇毒",
+          "score": "-60"
+        },
+        {
+          "name": "封脈",
+          "score": "-30"
+        },
+        {
+          "name": "換脈經",
+          "score": "-60"
+        }
+      ]
+    },
+    {
+      "name": "換脈經",
+      "score": "60",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "封脈",
+          "score": "-60"
+        },
+        {
+          "name": "奇毒",
+          "score": "-30"
+        },
+        {
+          "name": "北極神功",
+          "score": "-60"
+        }
+      ]
+    },
+    {
+      "name": "太陽神功",
+      "score": "60",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "內傷",
+          "score": "-60"
+        },
+        {
+          "name": "去勢",
+          "score": "-30"
+        },
+        {
+          "name": "太陰神功",
+          "score": "-60"
+        }
+      ]
+    },
+    {
+      "name": "太陰神功",
+      "score": "60",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "封脈",
+          "score": "-60"
+        },
+        {
+          "name": "內傷",
+          "score": "-30"
+        },
+        {
+          "name": "太陽神功",
+          "score": "-60"
+        }
+      ]
+    },
+    {
+      "name": "重劍口訣",
+      "score": "5",
+      "color":"primary",
+      "ref": [
+        {
+          "name": "劍法",
+          "score": "20"
+        },
+        {
+          "name": "刀法",
+          "score": "20"
+        },
+        {
+          "name": "斷臂",
+          "score": "40"
+        }
+      ]
+    }
+  ]
+}
